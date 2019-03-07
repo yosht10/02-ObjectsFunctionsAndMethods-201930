@@ -4,11 +4,11 @@ Demonstrates using (calling) FUNCTIONS and using (calling) METHODS:
   -- how they differ.
 
 Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher,
-         Aaron Wilkin, their colleagues, and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         Aaron Wilkin, their colleagues, and Taeko Yoshii.
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 ###############################################################################
-# TODO: 2.
+# DONE: 2.
 #   With your instructor, READ the file   methods_vs_functions.txt
 #   in this project, ASKING QUESTIONS as needed to understand its contents.
 #   After you have done so, mark this _TODO_ as DONE
@@ -72,7 +72,7 @@ def jump_and_move_turtle(x1, y1, x2, y2):
 def draw_many_squares(my_turtle, number_of_squares, size, twist):
     """
     Makes the given   SimpleTurtle   object draw:
-      -- many squares (how many? answer: NUMBER_OF_SQUARES)
+      -- many squares (how many? answer: number_of_squares)
     where each square:
       -- has the same size (what size? answer: SIZE)
     and each square is:
@@ -98,7 +98,7 @@ def draw_many_squares(my_turtle, number_of_squares, size, twist):
         my_turtle.left(twist)
 
 ###############################################################################
-# TODO: 3.
+# DONE: 3.
 #   There are four FUNCTIONS defined ABOVE this:
 #     main
 #     run_example
@@ -135,10 +135,17 @@ def try_methods():
       -- forward    50 units
       -- backward  100 units
     """
+    tae = rg.SimpleTurtle('triangle')
+    tae.pen = rg.Pen('brown', 5)
+    tae.forward(150)
+    tae.left(90)
+    tae.forward(50)
+    tae.backward(100)
     ###########################################################################
     # TODO: 4. Implement and test this function, per its doc-string above.
     #   The testing code (in main) is already written for you.
     ###########################################################################
+
 
 
 ###############################################################################
@@ -151,6 +158,22 @@ def try_functions():
      -- One jumps to (100, 200), then moves (while drawing) to (0, 0)
      -- One jumps to (-50, 50), then moves (while drawing) to (100, 100)
     """
+    tae = rg. SimpleTurtle('triangle')
+    tae.pen = rg.Pen('yellow', 5)
+    tae.pen_up()
+    tae.go_to(rg.Point(200, 100))
+    tae.pen_down()
+    tae.go_to(rg.Point(300, 30))
+    tae.pen_up()
+    tae.go_to(rg.Point(100, 200))
+    tae.pen_down()
+    tae.go_to(rg.Point(0, 0))
+    tae.pen_up()
+    tae.go_to(rg.Point(-50, 50))
+    tae.pen_down()
+    tae.go_to(rg.Point(100, 100))
+
+
     ###########################################################################
     # TODO: 5. Implement and test this function, per its doc-string above.
     #   The testing code (in main) is already written for you.
@@ -197,6 +220,64 @@ def try_methods_and_functions():
 
       8. Draw a SQUARE whose sides are each of length 50.
     """
+    tae = rg.SimpleTurtle('triangle')
+    tae.pen = rg.Pen('blue', 5)
+    tae.backward(150)
+    tae.speed = 1
+
+    tae.left(90)
+    tae.forward(100)
+    tae.right(90)
+    tae.forward(100)
+    tae.right(90)
+    tae.forward(100)
+
+    tae.right(60)
+    tae.forward(100)
+    tae.right(90)
+    tae.forward(100)
+    tae.right(90)
+    tae.forward(100)
+    tae.right(90)
+    tae.forward(100)
+
+    tae.speed =5
+    tae.pen = rg.Pen('red',5)
+    for k in range(10):
+        tae.forward(50)
+        tae.right(90)
+        tae.forward(50)
+        tae.right(90)
+        tae.forward(50)
+        tae.right(90)
+        tae.forward(50)
+        tae.right(105)
+
+    tae.speed = 100
+    tae.pen = rg.Pen('red', 35)
+    for k in range(8):
+        tae.forward(300)
+        tae.right(90)
+        tae.forward(300)
+        tae.right(90)
+        tae.forward(300)
+        tae.right(90)
+        tae.forward(300)
+        tae.right(150)
+
+    tae.pen = rg.Pen('black', 3)
+    tae.backward(200)
+    tae.draw_circle(30)
+    tae.forward(50)
+    tae.right(90)
+    tae.forward(50)
+    tae.right(90)
+    tae.forward(50)
+    tae.right(90)
+    tae.forward(50)
+
+
+
     ###########################################################################
     # TODO: 6. Implement and test this function, per its doc-string above.
     #   The testing code (in main) is already written for you.
